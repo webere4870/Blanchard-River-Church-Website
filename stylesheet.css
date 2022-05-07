@@ -4,6 +4,8 @@
     --darkGray: rgb(36, 36, 36);
     --mainFont: 'Raleway', sans-serif;
     --blockFont: 'Staatliches', cursive;
+    --green: #02ec88;
+    --darkerGreen: #01c16e;
 }
 
 *
@@ -13,6 +15,9 @@
     padding: 0;
     font-family: var(--mainFont);
     font-weight: lighter;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    transition-property: all;
 }
 
 body, html
@@ -39,6 +44,60 @@ body{
 .shadow:hover{
     box-shadow: 0 0 40px gray;
     cursor: pointer;
+}
+
+.afterUnderline
+{
+    position: relative;
+}
+
+.afterUnderline::before
+{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 110%;
+    left: 20%;
+    background: var(--green);
+}
+
+.pillBtn
+{
+    background-color: var(--green);
+    border: none;
+    color: black;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+.pillBtn:hover{
+    background-color: var(--darkerGreen);
+}
+
+.pillBtnClear
+{
+    background-color: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+    border: 2px solid white;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+.pillBtnClear:hover{
+    background-color: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
 }
 
 #slideshow{
@@ -69,6 +128,12 @@ body{
 .blockFont
 {
     font-family: var(--blockFont);
+    font-size: 4.0rem;
+}
+
+.greenLetter{
+    font-family: var(--blockFont);
+    color: var(--green);
 }
 
 .white
@@ -135,6 +200,23 @@ a
     background: var(--darkGray);
 }
 
+.footer > *{
+    margin: 10px;
+    color: white;
+}
+
+.footer a{
+    color: white;
+    margin: 12px;
+}
+
+.innerFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .slide{
     position: absolute;
@@ -176,7 +258,58 @@ a
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 40px;
+    margin-left: 40px;
+}
+
+#quoteBlock
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#quoteBlock > *{
+    margin: 4px;
+}
+
+#quoteBlock h2
+{
+    width: 70%;
+}
+
+.quoteBubble
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quoteBubble:nth-of-type(1)
+{
+    transform: translateX(-120px);
+}
+
+.quoteBubble:nth-of-type(2)
+{
+    transform: translateX(80px);
+}
+
+a:hover{
+    /* text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px; */
+    color: var(--green);
 }
 
 
