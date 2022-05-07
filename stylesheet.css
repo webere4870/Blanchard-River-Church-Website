@@ -1,0 +1,111 @@
+:root{
+    --white: #f2f2f2;
+    --darkGray: rgb(36, 36, 36);
+    --mainFont: 'Raleway', sans-serif;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--mainFont);
+    font-weight: lighter;
+}
+
+body, html
+{
+    overflow-x: hidden;
+}
+
+#slideshow{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#mapid {height: 300px; width: 85vw; z-index: 10;}
+
+#overlay
+{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0.6));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav
+{
+    height: 70px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: var(--white);
+    box-shadow: 0 0 30px gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 5px 50px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: gray;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--darkGray);
+}
+
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#slideshow img{
+    height: auto;
+    width: 100vw;
+}
+
+.colFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rowFlex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullPage
+{
+    min-height: 100vh;
+    width: 100vw;
+}
