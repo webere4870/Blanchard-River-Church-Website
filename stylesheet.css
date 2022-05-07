@@ -1,7 +1,9 @@
 :root{
     --white: #f2f2f2;
+    --darkWhite: #c5c5c5;
     --darkGray: rgb(36, 36, 36);
     --mainFont: 'Raleway', sans-serif;
+    --blockFont: 'Staatliches', cursive;
 }
 
 *
@@ -16,6 +18,27 @@
 body, html
 {
     overflow-x: hidden;
+}
+
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0.6)), url("./images/churchSmaller.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shadow{
+    box-shadow: 0 0 10px gray;
+    transition-property: all;
+    transition-duration:.3s;
+    transition-timing-function: linear;}
+
+.shadow:hover{
+    box-shadow: 0 0 40px gray;
+    cursor: pointer;
 }
 
 #slideshow{
@@ -38,24 +61,63 @@ body, html
     z-index: 1;
 }
 
-nav
+.mainFont
+{
+    font-family: var(--mainFont);
+}
+
+.blockFont
+{
+    font-family: var(--blockFont);
+}
+
+.white
+{
+    color: white;
+}
+
+
+
+.desktopNavigation
 {
     height: 70px;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     background: var(--white);
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 10px gray;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-nav a{
+.desktopNavigation a{
     height: 100%;
-    padding: 5px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.navBox{
+    display: none;
+    background: black;
+}
+
+.mobileNavigation
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--white);
+    color: black;
 }
 
 a
@@ -63,9 +125,7 @@ a
     text-decoration: none;
 }
 
-nav a:hover{
-    background-color: gray;
-}
+
 
 .footer{
     display: flex;
@@ -108,4 +168,44 @@ nav a:hover{
 {
     min-height: 100vh;
     width: 100vw;
+}
+
+#homePage
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .desktopNavigation a
+    {
+        display: none;
+    }
+    .desktopNavigation a:nth-of-type(1)
+    {
+        display: inherit;
+    }
+    .navBox{
+        display: inherit;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+
+}
+
+@media screen and (max-width: 600px)
+{
+
+}
+
+@media screen and (max-width: 450px)
+{
+
 }
