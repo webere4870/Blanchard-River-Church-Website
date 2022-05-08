@@ -1,4 +1,9 @@
-name = input("What is your name: ")
-age = float(input("How tall are you?"))
+dict = {
+    "Eli": 2,
+    "Weber": 1
+}
 
-print(name, age)
+dict['Eli'] = dict.get("Eli") + 1
+dict["temp"] = "Hey"
+
+print(dict)
