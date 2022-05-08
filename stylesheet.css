@@ -6,6 +6,7 @@
     --blockFont: 'Staatliches', cursive;
     --green: #02ec88;
     --darkerGreen: #01c16e;
+    --greenGradient: rgba(2, 236, 136, .7);
 }
 
 *
@@ -36,10 +37,11 @@ body{
 }
 
 .shadow{
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 20px gray;
     transition-property: all;
     transition-duration:.3s;
-    transition-timing-function: linear;}
+    transition-timing-function: linear;
+}
 
 .shadow:hover{
     box-shadow: 0 0 40px gray;
@@ -57,9 +59,25 @@ body{
     position: absolute;
     width: 60%;
     height: 2px;
-    top: 110%;
+    top: 100%;
     left: 20%;
     background: var(--green);
+}
+
+.afterUnderlineWhite
+{
+    position: relative;
+}
+
+.afterUnderlineWhite::before
+{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 100%;
+    left: 20%;
+    background: white;
 }
 
 .pillBtn
@@ -265,6 +283,40 @@ a
     margin-top: 35px;
 }
 
+#historyPage
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#historyFirst
+{
+    width: 50vw;
+    height: 100vh;
+    background: linear-gradient(var(--greenGradient), var(--greenGradient));
+    
+}
+
+#historySecond
+{
+    width: 50vw;
+    height: 100vh;
+    padding: 40px;
+}
+
+#historyThird{
+ background: var(--white);
+ min-height: 100vh;
+}
+
+#backgroundDiv
+{
+    
+}
+
 #contactPage
 {
     margin-top: 35px;
@@ -361,6 +413,10 @@ a:hover{
     }
     .navBox{
         display: inherit;
+    }
+    #historyFirst, #historySecond
+    {
+        width: 100vw;
     }
 }
 
