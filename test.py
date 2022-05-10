@@ -1,9 +1,9 @@
-dict = {
-    "Eli": 2,
-    "Weber": 1
-}
+import os
 
-dict['Eli'] = dict.get("Eli") + 1
-dict["temp"] = "Hey"
+files = os.listdir("testFolder")
+pathName = os.getcwd() + "\\testFolder\\";
+print(pathName)
+for file in files:
+    os.remove(pathName + file)
 
-print(dict)
+os.rmdir("testFolder")
