@@ -1,9 +1,7 @@
-import os
+from sub.againTest import Hunt, Prey, Both
 
-files = os.listdir("testFolder")
-pathName = os.getcwd() + "\\testFolder\\";
-print(pathName)
-for file in files:
-    os.remove(pathName + file)
+temp = Both()
 
-os.rmdir("testFolder")
+temp.hunt()
+temp.prey()
+print(temp.final)

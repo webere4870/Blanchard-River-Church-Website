@@ -36,6 +36,14 @@ body{
     background-repeat: no-repeat;
 }
 
+a:hover{
+    /* text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px; */
+    color: var(--green);
+}
+
 .shadow{
     box-shadow: 0 0 20px gray;
     transition-property: all;
@@ -159,7 +167,34 @@ body{
     color: white;
 }
 
+.green{
+    color: var(--green);
+}
 
+.pictureBorder
+{
+    position: relative;
+}
+
+.pictureBorder::before{
+    content: '';
+    background: var(--green);
+    width: 2px;
+    height: 35%;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+
+.pictureBorder::after{
+    content: '';
+    background: var(--green);
+    width: 2px;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+}
 
 .desktopNavigation
 {
@@ -204,6 +239,15 @@ body{
     transition-duration: unset;
     transition-timing-function: unset;
     transition-property: unset;
+    z-index: 10;
+}
+
+.mobileNavigation a{
+    margin: 15px 0;
+    font-family: var(--mainFont);
+    color: black;
+    font-weight: lighter;
+    font-size: 1.8rem;
 }
 
 a
@@ -211,7 +255,44 @@ a
     text-decoration: none;
 }
 
+.contactStrip
+{
+    min-height: 150px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--green);
+    
+}
 
+.iconRow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.iconBubble
+{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.iconBubble i{
+    color: var(--green);
+}
+
+.contactStrip a{
+    color: white;
+}
 
 .footer{
     display: flex;
@@ -304,11 +385,11 @@ a
     background: var(--white);
     width: 100vw;
     min-height: 100vh;
+    padding-top: 30px;
 }
 
 #leftD, #rightD
 {
-    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -326,9 +407,23 @@ a
     width: 60%;
 }
 
+ul li{
+    margin-left: 15px;
+    list-style-type: disc;
+    color: var(--green);
+}
+
+ul li a{
+    color: black;
+}
+
+ul li span{
+    color: black;
+}
+
 .dPoint
 {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .dPoint h1
@@ -401,6 +496,15 @@ a
     
 }
 
+a:hover{
+    /* text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px; */
+    color: var(--green);
+}
+
+
 #historySecond
 {
     width: 50vw;
@@ -411,6 +515,29 @@ a
 #historyThird{
  background: var(--white);
  min-height: 100vh;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+
+#leftHistory{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+}
+
+#rightHistory
+{
+    background: url("./images/oldChurch.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 30%;
 }
 
 #backgroundDiv
@@ -492,14 +619,10 @@ label{
     align-items: center;
 }
 
-
-a:hover{
-    /* text-decoration: underline;
-    text-decoration-color: var(--green);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px; */
-    color: var(--green);
+.contactStrip a:hover{
+    color: black;
 }
+
 
 
 @media screen and (max-width: 1024px)
@@ -523,6 +646,13 @@ a:hover{
 
 @media screen and (max-width: 768px)
 {
+    #leftHistory, #rightHistory{
+        width: 80%;
+    }
+    #leftD, #rightD
+    {
+        width: 80%;
+    }
     #homePage
     {
         align-items: center;
