@@ -1,4 +1,4 @@
-/*
+
 $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() { 
@@ -9,7 +9,7 @@ setInterval(function() {
   .end()
   .appendTo('#slideshow');
 }, 6000);
-*/
+
 
 $('.navBox').click((evt)=>
 {

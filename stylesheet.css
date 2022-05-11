@@ -127,7 +127,9 @@ a:hover{
 }
 
 #slideshow{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
@@ -257,13 +259,14 @@ a
 
 .contactStrip
 {
-    min-height: 150px;
+    min-height: 180px;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     background: var(--green);
-    
+    padding-top: 15px;
 }
 
 .iconRow
@@ -364,6 +367,46 @@ a
     margin-top: 35px;
 }
 
+#infoPage
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 35px);
+    width: 100vw;
+    margin-top: 35px;
+}
+
+#infoPage .colFlex{
+    margin-top: 35px;
+}
+
+#infoPage h1{
+    margin: 10px;
+}
+
+.infoBlock
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    height: 70vh;
+    width: 25vw;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 0px 2px 0 var(--greenGradient);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 20px 10px;
+}
+
+.infoBlock a{
+    color:white;
+}
+
 #doctrinePage
 {
     display: flex;
@@ -386,6 +429,11 @@ a
     width: 100vw;
     min-height: 100vh;
     padding-top: 30px;
+}
+
+.pBlock
+{
+    width: 60%; 
 }
 
 #leftD, #rightD
@@ -482,19 +530,33 @@ ul li span{
 #historyPage
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 35px);
+    width: 100vw;
+    margin-top: 35px;
+    position: relative;
+}
+
+#historyContent{
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 4;
 }
 
 #historyFirst
 {
     width: 50vw;
     height: 100vh;
-    background: linear-gradient(var(--greenGradient), var(--greenGradient));
-    
+    /* background: linear-gradient(var(--greenGradient), var(--greenGradient)); */
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 a:hover{
     /* text-decoration: underline;
@@ -627,6 +689,30 @@ label{
 
 @media screen and (max-width: 1024px)
 {
+    #leftContact, #rightContact
+    {
+        width: 100%;
+        margin: 20px 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .contactStrip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #infoPage
+    {
+        justify-content: center;
+    }
+    .infoBlock
+    {
+        width: 80vw;
+    }
+
     .desktopNavigation a
     {
         display: none;

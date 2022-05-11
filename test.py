@@ -1,7 +1,4 @@
-from sub.againTest import Hunt, Prey, Both
+doubler = lambda x: x + 10
 
-temp = Both()
-
-temp.hunt()
-temp.prey()
-print(temp.final)
+print(doubler(10))
+print(doubler(20))
