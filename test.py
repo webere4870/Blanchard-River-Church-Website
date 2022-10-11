@@ -1,20 +1,25 @@
-from multiprocessing import Process, cpu_count
-import string
+from threading import Thread
 import time
+def func1(var):
+    counter = 0
+    while counter < var:
+        counter += 1
+        time.sleep(2)
+    print("Func1 done")
 
-def counter(num):
-    count =0
-    while count < num:
-        count +=1 
+def func2(var):
+    counter = 0
+    while counter < var:
+        counter += 1
+        time.sleep(1)
+    print("Func2 done")
 
-def main():
-    print(cpu_count)
-    a = Process(target=counter, args=(100000000, ))
-    b = Process(target=counter, args=(50000000, ))
-    a.start()
-    a.join()
-    print("Finished in: " + str(time.perf_counter()))
+x = Thread(target=func1, args=(3,))
+y = Thread(target=func2, args=(5,))
+x.start()
+y.start()
+x.join()
+y.join()
+print("Here")
 
-
-if __name__ == "__main__":
-    main()
+print(time.perf_counter())
