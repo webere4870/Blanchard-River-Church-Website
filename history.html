@@ -8,6 +8,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ccd856110f.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -24,27 +25,6 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="desktopNavigation">
-        <a href="#" style="justify-self: flex-start; margin-right: auto;">Blanchard River CoC</a>
-        <a href="./index.html">Home</a>
-        <a href="./history.html">History</a>
-        <a href="./doctrine.html">Doctrine</a>
-        <a href="./info.html">Info</a>
-        <a href="./contact.html">Contact</a>
-        <div class="shadow navBox" style="margin-right: 40px; padding: 6px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16" >
-                <path class="shadow" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </div>
-    </nav>
-
-    <nav class="mobileNavigation colFlex" style="display: none;">
-        <a href="./index.html">Home</a>
-        <a href="./history.html">History</a>
-        <a href="./doctrine.html">Doctrine</a>
-        <a href="./info.html">Info</a>
-        <a href="./contact.html">Contact</a>
-    </nav>
 
     <div id="historyPage">
         <div id="historyContent" class="colFlex">
@@ -66,11 +46,10 @@
         </div> -->
         
         <div id="slideshow">
-            <div class="slide">
-              <img src="./images/churchSmaller.jpg">
+            <div class="slide" style="background-image: url('./images/churchSmaller.jpg');">
+              
             </div>
-            <div class="slide">
-              <img src="./images/vbs.jpg">
+            <div class="slide" style="background-image: url('./images/vbs.jpg')">
             </div>
         </div> 
         <div id="overlay" style="position: absolute; top: 0; left: 0">
@@ -161,7 +140,7 @@
             <a href="#">Contact Us</a>
         </div> -->
     </div> 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="./LoadPartials.js"></script>
     <script src="./control.js"></script>
 </body>
 </html>

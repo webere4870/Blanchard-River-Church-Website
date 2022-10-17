@@ -4,6 +4,7 @@
     --darkGray: rgb(36, 36, 36);
     --mainFont: 'Raleway', sans-serif;
     --blockFont: 'Staatliches', cursive;
+    --coolFont: 'Montserrat', sans-serif;
     --green: #02ec88;
     --darkerGreen: #01c16e;
     --greenGradient: rgba(2, 236, 136, .7);
@@ -131,7 +132,7 @@ a:hover{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow-y: hidden;
 }
 
@@ -160,13 +161,20 @@ a:hover{
 }
 
 .greenLetter{
-    font-family: var(--blockFont);
+    font-family: var(--coolFont);
     color: var(--green);
+    font-size: 80px;
 }
 
 .white
 {
+    font-family: var(--coolFont);
     color: white;
+
+}
+
+h1.white{
+    font-size: 50px;
 }
 
 .green{
@@ -336,6 +344,9 @@ a
     left: 0;
     height: 100vh;
     width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #slideshow img{
@@ -371,7 +382,7 @@ a
     align-items: flex-start;
     flex-direction: column;
     margin-left: 40px;
-    margin-top: 35px;
+    
 }
 
 #infoPage
@@ -380,13 +391,13 @@ a
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    min-height: calc(100vh - 35px);
+    min-height: calc(100vh );
     width: 100vw;
-    margin-top: 35px;
+    
 }
 
 #infoPage .colFlex{
-    margin-top: 35px;
+    
 }
 
 #infoPage h1{
@@ -417,12 +428,20 @@ a
 #doctrinePage
 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     width: 100vw;
-    min-height: calc(100vh - 70px);
+    height: 85vh;
     margin-top: 70px;
+    padding-left: 10%;
+    gap: 20px;
+    position: relative;
+}
+
+.pBlock{
+    width: 50%;
+    color: white;
 }
 
 #doctrinePage2
@@ -432,7 +451,7 @@ a
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    background: var(--white);
+    background: white;
     width: 100vw;
     min-height: 100vh;
     padding-top: 30px;
@@ -540,9 +559,9 @@ ul li span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 35px);
+    min-height: calc(100vh );
     width: 100vw;
-    margin-top: 35px;
+    
     position: relative;
 }
 
@@ -616,7 +635,7 @@ a:hover{
 
 #contactPage
 {
-    margin-top: 35px;
+    
 }
 
 #contactForm
@@ -657,11 +676,11 @@ label{
 
 #quoteBlock
 {
+    width: 75%;
+    height: 50%;
     position: absolute;
-    top: 35px;
+    top: 25%;
     right: 0;
-    width: 70%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -691,7 +710,7 @@ label{
 .contactStrip a:hover{
     color: black;
 }
-
+  
 
 
 @media screen and (max-width: 1024px)
@@ -766,3 +785,139 @@ label{
 {
 
 }
+
+.wrapper ul li{
+    list-style: none;
+  }
+
+  .wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    background: #000;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    z-index: 19;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: fixed;
+    z-index: 21;
+    right: 30px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+    background: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: var(--green);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+    /*
+    background: #fff;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; 
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    
+    */
+    
+  }
+  .wrapper ul li a:hover:after{
+    width: 80%;
+  }
+
+  .wrapper ul li a:hover{
+    color: #fff;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #202020;
+  }
+  .content .title{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .content p{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  
+  @keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }

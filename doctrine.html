@@ -8,6 +8,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ccd856110f.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -16,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ccd856110f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -24,94 +28,16 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="desktopNavigation">
-        <a href="#" style="justify-self: flex-start; margin-right: auto;">Blanchard River CoC</a>
-        <a href="./index.html">Home</a>
-        <a href="./history.html">History</a>
-        <a href="./doctrine.html">Doctrine</a>
-        <a href="./info.html">Info</a>
-        <a href="./contact.html">Contact</a>
-        <div class="shadow navBox" style="margin-right: 40px; padding: 6px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16" >
-                <path class="shadow" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </div>
-    </nav>
 
-    <nav class="mobileNavigation colFlex" style="display: none;">
-        <a href="./index.html">Home</a>
-        <a href="./history.html">History</a>
-        <a href="./doctrine.html">Doctrine</a>
-        <a href="./info.html">Info</a>
-        <a href="./contact.html">Contact</a>
-    </nav>
 
     <div id="doctrinePage">
-        <h1 class="white afterUnderline" style="margin-bottom: 15px;">Doctrine</h1>
-        <p class="white pBlock" style="text-align: center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium est impedit, iste natus aliquam. Quo ipsam alias vitae exercitationem dolor quis quisquam recusandae perferendis? Error expedita repellat nesciunt praesentium?</p>
-        <!-- <div class="rowFlex" style="flex-wrap: wrap; justify-content: space-evenly; width: 100%;">
-            <a href="#">
-                <div class="dBubble">
-                    <i class="fa-solid fa-church"></i>
-                    <h1>Scripture</h1>
-                </div>
-            </a>
-            <a href="#">
-                <div class="dBubble">
-                    <i class="fa-solid fa-cross"></i>
-                    <h1>Scripture</h1>
-                </div>
-            </a>
-            <a href="#">
-                <div class="dBubble">
-                    <i class="fa-solid fa-church"></i>
-                    <h1>Scripture</h1>
-                </div>
-            </a>
-        </div> -->
+        <h1 class="white afterUnderline">Church Doctrine</h1>
+        <p class="pBlock">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid voluptatibus qui? Sequi illum impedit consectetur ex itaque molestiae eaque modi voluptatibus obcaecati dolor perferendis odio, nostrum possimus voluptas non recusandae fugit vero quisquam quibusdam optio. Qui adipisci laborum culpa!</p>
+        <svg style="position: absolute; bottom: 0; left: 0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,213.3C480,245,600,267,720,250.7C840,235,960,181,1080,144C1200,107,1320,85,1380,74.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        <div><button class="pillBtn">Howdy</button></div>
     </div>
     <div id="doctrinePage2">
-        <div id="leftD">
-            <h1 style="font-weight: bold; margin-bottom: 15px;" class="afterUnderline">Quick Guide</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium est impedit, iste natus aliquam. Quo ipsam alias vitae exercitationem dolor quis quisquam recusandae perferendis? Error expedita repellat nesciunt praesentium?</p>
-            <ul>
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-            </ul>
-        </div>
-        <div id="rightD">
-            <div class="dPoint">
-                <h1 class="blockFont">Header</h1>
-                <h3 style="color: black">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam repudiandae aspernatur vel provident autem voluptatibus magni voluptates corporis molestias obcaecati?</h3>
-                <h2 >Scripture</h2>
-                <ul>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                </ul>
-            </div>
-            <div class="dPoint">
-                <h1 class="blockFont">Header</h1>
-                <h3 style="color: black">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam repudiandae aspernatur vel provident autem voluptatibus magni voluptates corporis molestias obcaecati?</h3>
-                <h2 >Scripture</h2>
-                <ul>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                </ul>
-            </div>
-            <div class="dPoint">
-                <h1 class="blockFont">Header</h1>
-                <h3 style="color: black">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam repudiandae aspernatur vel provident autem voluptatibus magni voluptates corporis molestias obcaecati?</h3>
-                <h2 >Scripture</h2>
-                <ul>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                    <li><span>Lorem, ipsum dolor.</span></li>
-                </ul>
-            </div>
-        </div>
+
     </div>
     <!-- <div id="slideshow">
         <div class="slide">
@@ -188,7 +114,8 @@
             <a href="#">Contact Us</a>
         </div> -->
     </div> 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script type="module" src="./LoadPartials.js"></script>
     <script src="./control.js"></script>
 </body>
 </html>
