@@ -16,6 +16,18 @@ $('.navBox').click((evt)=>
     $('.mobileNavigation').slideToggle(500)
 })
 
+setInterval(()=>
+{
+  if(window.scrollY > 0)
+  {
+    $('nav').attr("class", "sticky")
+  }
+  else
+  {
+    $('nav').attr("class", "")
+  }
+}, 200)
+
 let latitude = 41.037660;
     let longitude = -83.649540;
     let mymap = L.map('mapid', {tap: false}).setView([latitude, longitude], 13);

@@ -8,6 +8,8 @@
     --green: #02ec88;
     --darkerGreen: #01c16e;
     --greenGradient: rgba(2, 236, 136, .7);
+    --backgroundGradient: linear-gradient(to right, #19165471, #43c6ac5b);
+    --blockFont: 'Figtree', sans-serif;
 }
 
 *
@@ -30,7 +32,11 @@ body, html
 body{
     min-height: 100vh;
     width: 100vw;
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0.6)), url("./images/churchSmaller.jpg");
+
+    background: #43C6AC;  /* fallback for old browsers */
+
+background: var(--backgroundGradient), url("./images/churchSmaller.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -88,6 +94,8 @@ a:hover{
     left: 20%;
     background: white;
 }
+
+
 
 .pillBtn
 {
@@ -205,6 +213,35 @@ h1.white{
     bottom: 0;
     right: -15px;
 }
+
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    gap: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 20px;
+    transition: .3s all linear;
+}
+
+.sticky{
+    height: 80px;
+    background: white;
+}
+
+.blockFont
+{
+    font-family: var(--blockFont);
+}
+
+
+
+
 
 .desktopNavigation
 {
@@ -921,3 +958,14 @@ label{
       filter: hue-rotate(360deg);
     }
   }
+
+  nav a{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav.sticky a{
+    color: black;
+}
