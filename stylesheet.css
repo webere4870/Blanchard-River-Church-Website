@@ -24,6 +24,7 @@
     transition-duration: .5s;
     transition-timing-function: linear;
     transition-property: all;
+    scroll-behavior: smooth;
 }
 
 body, html
@@ -310,16 +311,20 @@ nav
     align-items: center;
 }
 
-div.pictureDiv:nth-of-type(odd)
-{
-    border-radius: 10px;
-}
 
 
 .leftCurve
 {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+
+.rightCurve
+{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 
@@ -755,9 +760,29 @@ a:hover{
  background: var(--white);
  min-height: 100vh;
  display: flex;
- justify-content: space-evenly;
+ justify-content: center;
  align-items: center;
- flex-wrap: wrap;
+flex-direction: column;
+padding: 100px 0;
+gap: 150px;
+}
+
+
+#historyFourth{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+   padding: 75px;
+   gap: 150px;
+}
+
+
+#calendar
+{
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
 }
 
 
@@ -914,8 +939,37 @@ label{
         justify-content: center;
         align-items: center ;
     }
+
+@media screen and (max-width: 868px)
+{
+    .pictureRow{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pictureDiv
+    {
+        order: 1e;
+    }
+
+    .pictureTextBox
+    {
+        width: 100%;
+        order: 0;
+    }
+
+    .pictureDiv
+    {
+        border-radius: 10px;
+    }
+}
 @media screen and (max-width: 768px)
 {
+    #historyFourth
+    {
+        padding: 20px;
+    }
     #active, .menu-btn, .wrapper
     {
         display: flex;

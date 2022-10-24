@@ -5,6 +5,7 @@ let nav=`
         <a href="./doctrine.html">Doctrine</a>
         <a href="./info.html">Info</a>
         <a href="./contact.html">Contact</a>
+        <a href="./calendar.html">Events</a>
 </nav>
 
 <input type="checkbox" id="active">
@@ -16,6 +17,7 @@ let nav=`
         <li><a href="./doctrine.html">Doctrine</a></li>
         <li><a href="./info.html">Info</a></li>
         <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./contact.html">Events</a></li>
     </ul>
 </div> `
 
