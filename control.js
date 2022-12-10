@@ -18,7 +18,7 @@ $('.navBox').click((evt)=>
 
 setInterval(()=>
 {
-  if(window.scrollY > 0)
+  if(window.scrollY > 0 || location.href.includes('about'))
   {
     $('nav').attr("class", "sticky")
   }
