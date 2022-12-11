@@ -4,6 +4,7 @@ let nav=`
 <a href="./calendar.html" class="swipeInDude">Calendar</a>
 <a href="./about.html" class="swipeInDude">About</a>
 <a href="./history.html" class="swipeInDude">History</a>
+<a href="./live.html" class="swipeInDude">Watch Live</a>
 </nav>
 
 <input type="checkbox" id="active">
@@ -14,6 +15,7 @@ let nav=`
     <li><a href="./calendar.html" class="swipeInDude">Calendar</a><li/>
     <li><a href="./about.html" class="swipeInDude">About</a><li/>
     <li><a href="./history.html" class="swipeInDude">History</a><li/>
+    <li><a href="./live.html" class="swipeInDude">Watch Live</a><li/>
     </ul>
 </div> `
 
