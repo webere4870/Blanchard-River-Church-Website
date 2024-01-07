@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;900&display=swap" rel="stylesheet">
@@ -38,84 +41,134 @@
             <div style="width: 100%" class="rowFlex">
                 <h1>Our Core Values and <span class="pictureCaption">Doctrine</span></h1>
             </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA1">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+            <div class="accordion" style="width: 100%" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Salvation
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We believe in the bodily death, burial, and resurrection of Jesus Christ (1 Cor. 15:3-4)
+                        <br/>
+                        We believe in the complete plan of salvation, including the necessity of baptism by immersion. (Mk. 16:16; Acts 2:38; Mt. 10:32; Acts 22:16; Col. 2:12; 1 Peter. 3:21)
                     </div>
-                    <div class="underSub">
-                        
-                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA2">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Authority of Scripture
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We believe in the Bible as the inspired word of God and our only rule of faith and practice. (2 Tim. 3:15-16)
                     </div>
-                    <div class="underSub">
-                        
-                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA3">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Holy Trinity
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        We believe in the Holy Trinity. (Jn. 16:7-15; Rom. 8:6-17; 1 Cor. 12:12-13; Phil. 2:5-11; Col. 2:9)
                     </div>
-                    <div class="underSub">
-                        
-                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA2">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Person, Work, and Deity of Jesus Christ
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe that Jesus is the Christ, the Son of the living God, and our personal Savior. (Mt. 10:32; 16:16; Acts 8:36-37; Rom. 10:10)
+                      </div>
                     </div>
-                    <div class="underSub">
-                        
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Literal Heaven and Hell
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in the literal reality of both heaven and hell. (Mt. 5:12; Lk. 16:19-31; Rev. 20:15; 21: 1-8)
+                      </div>
                     </div>
-                </div>
-            </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA2">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+                  </div>  
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Personal Priesthood
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in the priesthood of all believers. <br/>Mt. 27:51 <br/>1 Pet. 2:9-10 <br/>Heb. 4:15-16; 10:19-22)
+                      </div>
                     </div>
-                    <div class="underSub">
-                        
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Denomination and Structure
+                      </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in non-denominational congregational autonomy.  (Acts 6:3-6; 13:1-3; 14:23; 1 Cor. 5:4-5; 2 Cor. 8:19)
+<br/>
+We believe in faithfully, regularly, and consistently gathering for worship, Bible study, and fellowship.  (Acts 20:7; Heb. 10:19-25)
+                      </div>
                     </div>
-                </div>
-            </div>
-            <div class="aboutCard">
-                <div class="internalAbout" id="IA2">
-                    
-                </div>
-                <div class="abs">
-                    <div class="subInternal">
-                        <h2>Resurrection</h2>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Lord's Supper
+                      </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in the frequent and regular celebration of the Lord’s Supper.  (Acts 2:42; 20:7; 1 Cor. 16:1-2)
+                      </div>
                     </div>
-                    <div class="underSub">
-                        
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        Financial Giving
+                      </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in liberal financial giving for the glory of God and toward the advancement of His Kingdom.  (1 Cor. 16:2; 2 Cor. 9:6-10)
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTem">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        Great Commission
+                      </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        We believe in being missionaries and in generously supporting others who are. (Mt. 28:18-20)
+<br/>
+We believe in ministering help and encouragement to others-especially those in need. (Gal. 6:2)
+                      </div>
+                    </div>
+                  </div>
+              </div>
         </div>
     </div>
     
@@ -194,7 +247,7 @@
             <a href="#">Contact Us</a>
         </div> -->
     </div> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="module" src="./LoadPartials.js"></script>
     <script src="./control.js"></script>
 </body>
