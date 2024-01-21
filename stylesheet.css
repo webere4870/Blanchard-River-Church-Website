@@ -253,6 +253,7 @@ nav
     height: 80px;
     background: white;
     box-shadow: 0px 0px 20px rgb(211, 211, 211);
+    transition: .3s linear all;
 }
 
 .blockFont
@@ -1000,7 +1001,34 @@ label{
 .contactStrip a:hover{
     color: black;
 }
-  
+
+.hamburgery{
+    display: none;
+    width: 100vw !important;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+}
+
+
+
+
+.blowup{
+    height: 100vh;
+}
+
+
+
+
+
+.hamburgery i:hover
+{
+cursor: pointer;
+}
+
+
+
+
 
 
 @media screen and (max-width: 1024px)
@@ -1046,6 +1074,8 @@ label{
     }
 }
 
+
+
 #active, .menu-btn, .wrapper
     {
         display: none;
@@ -1064,7 +1094,9 @@ label{
 
     .pictureDiv
     {
-        order: 1e;
+        order: 1;
+        width: 80%;
+        margin: 20px 0 -20px 0;
     }
 
     .pictureTextBox
@@ -1080,6 +1112,12 @@ label{
 }
 @media screen and (max-width: 768px)
 {
+    .sticky > .hamburgery{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20px;
+    }
     #historyFourth
     {
         padding: 20px;
@@ -1088,8 +1126,19 @@ label{
     {
         display: flex;
     }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
     nav a{
-        display: none;
+        transition: .3s linear all;
+        opacity: 0;
+    }
+    nav a:hover{
+        color: var(--darkerGreen);
     }
     #leftHistory, #rightHistory{
         width: 80%;
